@@ -6,34 +6,155 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/main.min.css">
-  <title>BOOTSTRAP & SCSS BEM STARTER</title>
+  <title>Movies catalog</title>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-
-    </div>
-  </header>
-
-  <!-- MAIN -->
   <main class="main">
-    <section class="hero">
+    <div class="movies pt-4">
       <div class="container">
+        <h1 class="visually-hidden">Movies catalog</h1>
+        <h2 class="movies__main d-flex justify-content-center fs-3 fw-bold">Movies catalog</h2>
 
+        <div class="movies__box d-flex">
+          <div class="movies__left w-25">
+            <div class="movies__left-top mb-4">
+              <form class="movies__form">
+                <div class="mb-3">
+                  <input type="text" class="form-control" aria-describedby="emailHelp" name="user_name" placeholder="Write the name of the movie">
+                </div>
+
+                <div class="mb-3">
+                  <input type="number" minlength="3" class="form-control" aria-describedby="emailHelp" name="user_yo" placeholder="How old are you?">
+                </div>
+
+                <select class="form-select mb-3 name_yearoffilm" aria-label="Default select example">
+                  <option class="" selected disabled>Select year</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="all">All</option>
+                </select>
+
+                <select class="form-select mb-3 name_qualityoffilm" aria-label="Default select example">
+                  <option selected disabled>Rating (high to low)</option>
+                  <option value="low">low</option>
+                  <option value="middle">middle</option>
+                  <option value="middle">high</option>
+                </select>
+                <button type="submit" class="btn btn-primary w-100">Search</button>
+              </form>
+            </div>
+
+            <div class="movies__left-bottom">
+              <h2 class="movies__left-heading fs-4 fw-bold">Bookmarked movies</h2>
+
+              <ul class="list-unstyled border">
+
+                <li class="movies__box p-3 border-bottom">
+
+                    <h6 class="fs-6 fw-bold">Avengers: Infinity War</h6>
+                    <input class="btn btn-danger" type="reset" value="Remove">
+
+                </li>
+
+                <li class="movies__box p-3 border-bottom">
+
+                    <h6 class="fs-6 fw-bold">The Avengers</h6>
+                    <input class="btn btn-danger" type="reset" value="Remove">
+
+                </li>
+
+                <li class="movies__box p-3">
+
+                    <h6 class="fs-6 fw-bold">12 Years a Slave</h6>
+                    <input class="btn btn-danger" type="reset" value="Remove">
+
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="movies__right ps-5 w-75">
+            <h2 class="m-0 mb-1 fs-5 fw-bold">Search results:39</h2>
+            <p class="alert alert-primary text-black" >Use the form on the left to search for a movie</p>
+
+            <ul class="list-unstyled d-flex mb-5">
+              <li class="me-4">
+                <div class="card">
+                  <img src="./images/avangers.jpg" alt="img" width="410" height="206">
+
+                  <div class="pt-4 pe-0 pb-4 ps-4">
+                    <h6 class="fs-6 fw-bold">Avengers: Infinity War</h6>
+
+                    <span class="d-flex align-items-center mb-4">
+                      <i class='fa fa-calendar me-1'></i>
+                      <p class="m-0">2018</p>
+                    </span>
+
+                    <span class="d-flex align-items-center mb-4">
+                      <i class='fa fa-star text-warning me-1'></i>
+                      <p class="m-0">8.7</p>
+                    </span>
+
+                    <div class="">
+                      <button type="button" class="btn btn-outline-primary fs-6 me-2">Watch trailer</button>
+
+                      <button type="button" class="btn btn-outline-info fs-6 me-2">More info</button>
+
+                      <button type="button" class="btn btn-outline-success fs-6">Bookmark</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="card">
+                <img src="./images/avengers2012.jpeg" alt="img" width="410" height="206">
+
+                <div class="pt-4 pe-0 pb-4 ps-4">
+                  <h6 class="fs-6 fw-bold">Avengers: Infinity War</h6>
+
+                  <span class="d-flex align-items-center mb-4">
+                    <i class='fa fa-calendar me-1'></i>
+                    <p class="m-0">2012</p>
+                  </span>
+
+                  <span class="d-flex align-items-center mb-4">
+                    <i class='fa fa-star text-warning me-1'></i>
+                    <p class="m-0">8.1</p>
+                  </span>
+
+                  <div class="">
+                    <button type="button" class="btn btn-outline-primary fs-6 me-2">Watch trailer</button>
+
+                    <button type="button" class="btn btn-outline-info fs-6 me-2">More info</button>
+
+                    <button type="button" class="btn btn-outline-success fs-6">Bookmark</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <nav aria-label="Page navigation example">
+              <ul class="pagination d-flex justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-
     </div>
-  </footer>
-
-
-  <script src="./js/bootstrap.bundle.js"></script>
-  <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/script.js"></script>
+  </main>
 </body>
 </html>
